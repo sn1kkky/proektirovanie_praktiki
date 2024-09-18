@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 8</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a href="../task2/index.html">Задание 2</a> <br>
+
+    <button class="btn click-btn" id="clickButton">Нажмите</button>
+    <button class="btn hover-btn" id="hoverButton">Наведите</button>
+    <button class="btn dblclick-btn" id="dblclickButton">Двойной клик</button>
+    <button class="btn focus-btn" id="focusButton">Фокус</button>
+
+    <script>
+        document.getElementById('clickButton').addEventListener('click', function () {
+            this.classList.add('effect');
+            setTimeout(() => this.classList.remove('effect'), 300);
+        });
+
+        document.getElementById('hoverButton').addEventListener('mouseenter', function () {
+            this.classList.add('hover-effect');
+        });
+
+        document.getElementById('hoverButton').addEventListener('mouseleave', function () {
+            this.classList.remove('hover-effect');
+        });
+
+        document.getElementById('dblclickButton').addEventListener('dblclick', function () {
+            this.classList.add('dblclick-effect');
+            setTimeout(() => this.classList.remove('dblclick-effect'), 300);
+        });
+
+        document.getElementById('focusButton').addEventListener('focus', function () {
+            this.classList.add('focus-effect');
+        });
+
+        document.getElementById('focusButton').addEventListener('blur', function () {
+            this.classList.remove('focus-effect');
+        });
+    </script>
+
+</body>
+
+</html>

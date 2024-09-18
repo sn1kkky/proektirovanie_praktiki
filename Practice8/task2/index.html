@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 8</title>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <a href="../task3/index.html">Задание 3</a> <br>
+
+    <div class="content">
+        Нажмите клавиши <strong>R</strong>, <strong>G</strong> или <strong>B</strong>
+    </div>
+
+    <script>
+        const originalColor = window.getComputedStyle(document.body).backgroundColor;
+
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        document.addEventListener('keydown', function (event) {
+            const key = event.key.toLowerCase(); 
+
+            if (key === 'r') {
+                changeBackgroundColor('red');
+            } else if (key === 'g') {
+                changeBackgroundColor('green');
+            } else if (key === 'b') {
+                changeBackgroundColor('blue');
+            }
+        });
+
+        document.addEventListener('keyup', function () {
+            changeBackgroundColor(originalColor);
+        });
+    </script>
+
+</body>
+
+</html>

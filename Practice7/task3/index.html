@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 7</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    
+    <a href="../task4/index.html">Задание 4</a> <br>
+
+    <div id="text">Скрой меня, а потом я вернусь!!</div> <br>
+    <button id="toggleDivButton">Скрыть/Показать</button>
+
+    <script>
+    document.getElementById('toggleDivButton').onclick = function() {
+        var textDiv = document.getElementById('text');
+        if (textDiv.style.display === 'none') {
+        textDiv.style.display = 'block';
+        } else {
+        textDiv.style.display = 'none';
+        }
+    };
+    </script>
+
+
+</body>
+</html>

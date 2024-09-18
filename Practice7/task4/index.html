@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 7</title>
+    <script src="main.js"></script>
+</head>
+<body style="height: 2000px;">
+
+    <a href="../index.html">К списку заданий</a> <br>
+
+        <img src="https://imgs.search.brave.com/muRRFjge8o0X3VFN4nGgJwndN_ODWvk-YDg4omMFSD8/rs:fit:860:0:0:0/g:ce/aHR0cDovL3BuZ2lt/Zy5jb20vdXBsb2Fk/cy9mb290YmFsbC9z/bWFsbC9mb290YmFs/bF9QTkc1Mjc4OC5w/bmc" id="ball" style="position: absolute; left: 0; top: 0; transition: left 0.5s, top 0.5s;">
+        
+        <script>
+          document.body.onclick = function(event) {
+            var ball = document.getElementById('ball');
+            var ballWidth = ball.offsetWidth / 2;
+            var ballHeight = ball.offsetHeight / 2;
+      
+            var newLeft = event.clientX - ballWidth;
+            var newTop = event.clientY - ballHeight;
+      
+            ball.style.left = newLeft + 'px';
+            ball.style.top = newTop + 'px';
+          };
+        </script>
+
+</body>
+</html>
