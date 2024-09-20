@@ -1,0 +1,240 @@
+body {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar {
+    background: linear-gradient(45deg, #ff85a2, #ff4081); 
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 40px;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 12px 25px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border-radius: 30px; 
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.menu-link:hover {
+    background: rgba(255, 255, 255, 0.4); 
+    transform: scale(1.05);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.dropdown-item {
+    margin: 0;
+}
+
+.dropdown-link {
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    color: #ff4081;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-link:hover {
+    background-color: #ffe3ec;
+    color: #ff85a2; 
+}
+
+.menu-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        margin-bottom: 15px;
+    }
+}
+
+/* Стили для header */
+.header {
+    position: fixed; /* Фиксируем header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Цвет фона */
+    z-index: 100; /* Размещаем поверх остальных элементов */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень под header */
+}
+
+body {
+    margin: 0;
+    padding-top: 80px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    margin-right: 20px;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.menu-link:hover {
+    color: #ff4081;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 8px;
+    z-index: 99;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 0 20px;
+}
+
+.dropdown-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-link:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion {
+    margin: 40px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-header {
+    width: 100%;
+    background-color: #fafafa;
+    color: #333;
+    padding: 20px;
+    font-size: 20px;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.accordion-header:hover {
+    background-color: #ececec;
+}
+
+.accordion-header::after {
+    content: '▼';
+    font-size: 18px;
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+    transform: rotate(-180deg);
+}
+
+.accordion-content {
+    background-color: #f9f9f9;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px;
+    padding: 20px;
+}
