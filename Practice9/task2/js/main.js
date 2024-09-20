@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addNewsButton.addEventListener("click", addNews);
 
     document.addEventListener("keydown", (event) => {
-        if (event.key === "r" || event.key === "R" || event.key === "к" || event.key === "К") {
+        if (event.key === "b" || event.key === "B" || event.key === "и" || event.key === "И") {
             document.body.style.backgroundColor = "#333";
             document.body.style.color = "#fff";
         } else if (event.key === "w" || event.key === "W" || event.key === "ц" || event.key === "Ц") {
