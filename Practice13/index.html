@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Одиннадцатая практика</title>
+    <title>Тринадцатая практика</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
@@ -28,9 +28,12 @@
                     <li class="menu-item dropdown">
                         <a href="#" class="menu-link dropdown-toggle">Открой меня</a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-item"><a href="../Practice7/index.html" class="dropdown-link">7 Практика</a></li>
-                            <li class="dropdown-item"><a href="../Practice8/index.html" class="dropdown-link">8 Практика</a></li>
-                            <li class="dropdown-item"><a href="../Practice9/index.html" class="dropdown-link">9-10 Практика</a></li>
+                            <li class="dropdown-item"><a href="../Practice9/index.html" class="dropdown-link">9-10
+                                    Практика</a></li>
+                            <li class="dropdown-item"><a href="../Practice11/index.html" class="dropdown-link">11
+                                    Практика</a></li>
+                            <li class="dropdown-item"><a href="../Practice12/index.html" class="dropdown-link">12
+                                    Практика</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -38,7 +41,31 @@
         </div>
     </header>
 
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="images/onq.jpg" alt="1">
+            </div>
+            <div class="slide">
+                <img src="images/two.jpg" alt="2">
+            </div>
+            <div class="slide">
+                <img src="images/three.jpg" alt="3">
+            </div>
+        </div>
+
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
     <script src="main.js"></script>
+    <script src="slider.js"></script>
 
 </body>
 
